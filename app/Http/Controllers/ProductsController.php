@@ -14,7 +14,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::paginate(15);
         return view('products.index')->with(compact('products'));
     }
 
@@ -134,7 +134,7 @@ class ProductsController extends Controller
         $products = Product::where('nombre','LIKE',"%$queryString%")
         ->orWhere('marca','LIKE',"%$queryString%")
         ->orWhere('categorias','LIKE',"%$queryString%")
-        ->get();
+        ->paginate(15);
         return view('products.search')->with(compact('products','queryString'));
     }
 }

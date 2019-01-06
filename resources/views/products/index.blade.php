@@ -23,5 +23,8 @@
 		</div>
 	@endforeach
 	</div>
+	<div class="paglaravel">
+		{{$products->links()}}	
+	</div>
 	<a href="/products/create" class="btn btn-info">Crear</a>
 @endsection

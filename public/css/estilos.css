@@ -143,6 +143,13 @@ nav .navbar-collapse .navbar-nav .nav-item:hover{
 .product-page .body .stock{
 	font-size: 32px;
 }
+.paglaravel{
+	display: flex;
+	justify-content: center;
+}
+.paglaravel li{
+	display: block;
+}
 /*-------- fin PRODUCT PAGE -------- */
 
 /*-------- inicio ADMINISTRADOR PRODUCTOS -------- */
@@ -508,65 +515,6 @@ footer .legales p{
 	color: red;
 	margin: 10px 10px;
 }
-
-/*------------ PAGINA PRODUCTOS ------------*/
-
-.listado-productos .contenedor{
-	background: #fff;
-}
-.listado-productos .contenedor .card-producto{
-	border: solid #e2e2e2;
-}
-.listado-productos .contenedor .card-producto .imagen img{
-	width: 100%;
-
-}
-
-
-/*------------ PAGINACION ------------*/
-.paginacion {
-	margin-bottom: 30px;
-}
-
-.paginacion ul {
-	list-style: none;
-	text-align: center;
-}
-
-.paginacion ul li {
-	display: inline-block;
-	margin:0 5px;
-	color:#fff;
-}
-
-.paginacion ul li a {
-	display: block;
-	padding:10px 20px;
-	background: #595959;
-	color:#fff;
-}
-
-.paginacion ul li a:hover {
-	background: #10BBD5;
-	text-decoration: none;
-}
-
-.paginacion ul .active {
-	background: #10BBD5;
-	padding:10px 20px;
-}
-
-.paginacion ul .disabled{
-	background: #a8a8a8;
-	padding:10px 20px;
-	cursor: not-allowed;
-}
-
-.paginacion ul .disabled:hover {
-	background: #a8a8a8;
-}
-
-
 
 /*------------ MEDIA QUERIES ------------*/
 
