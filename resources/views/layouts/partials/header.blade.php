@@ -13,10 +13,9 @@
 					<div class="ml-auto menu">
 							<div class="no-sign">
 								@if(auth()->guest())
-									{{-- <a href="{{route('login')}}"><i class="fas fa-sign-in-alt"></i>Log In</a> --}}
-									<a href=""><i class="fas fa-sign-in-alt"></i>Log In</a>
+									<a href="{{route('login')}}"><i class="fas fa-sign-in-alt"></i>Log In</a>
 								@else
-									<a href="{{route('profile')}}">Mi Perfil</a>
+									<a href="{{route('profile')}}"><i class="fas fa-user-circle"></i>Mi Perfil</a>
 								@endif
 							</div>
 					</div>

@@ -50,8 +50,21 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'country' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+        ],[
+            'name.required' => 'Por favor, completar el nombre',
+            'name.max' => 'El nombre no puede ser más largo que 255 caracteres',
+            'lastname.required' => 'Por favor, completar el apellido',
+            'lastname.max' => 'El apellido no puede ser más largo que 255 caracteres',
+            'country.required' => 'Por favor, completar el país',
+            'email.required' => 'Por favor, completar el email',
+            'email.email' => 'Por favor, ingrese un email válido',
+            'password.required' => 'Por favor, completar la contraseña',
+            'password.min' => 'La contraseña debe tener al menos 6 caracteres',
+
         ]);
     }
 
@@ -65,6 +78,8 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'lastname' => $data['lastname'],
+            'country' => $data['country'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

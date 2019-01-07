@@ -19,6 +19,7 @@
 				<label for="codigo">Código de Producto</label>
 				<input type="text" name="codigo" id="codigo" class="form-control {{$errors->has('codigo') ? 'is-invalid' : ''}}" placeholder="Código" value="{{old('codigo')}}">
 			</div>
+			
 
 			<div class="form-group">
 				<label for="nombre">Nombre del Producto</label>

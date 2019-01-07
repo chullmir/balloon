@@ -16,7 +16,9 @@
 				<p class="product-code">{{$product->codigo}}</p>
 				<div class="botones">
 					<a href="/products/{{$product->id}}" class="btn btn-info">Ver</a>
-					<a href="/products/{{$product->id}}/edit" class="btn btn-secondary">Editar</a>
+					@if(!auth()->guest())
+						<a href="/products/{{$product->id}}/edit" class="btn btn-secondary">Editar</a>
+					@endif
 				</div>
 				
 			</div>

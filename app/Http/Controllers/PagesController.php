@@ -43,9 +43,8 @@ class PagesController extends Controller
     {
         return view('pages.contacto');
     }
-    public function search(Request $request)
+    public function profile()
     {
-        $busqueda = $request->busqueda;
-        
+        return view('pages.profile');
     }
 }

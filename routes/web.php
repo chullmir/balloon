@@ -21,5 +21,11 @@ Route::get('/publicitarios','PagesController@publicitarios')->name('publicitario
 Route::get('/puntos-venta','PagesController@puntos_venta')->name('puntos-venta');
 Route::get('/contacto','PagesController@contacto')->name('contacto');
 
+Route::get('/profile','PagesController@profile')->name('profile')->middleware('auth');
+
 Route::get('products/buscar','ProductsController@search')->name('search');
 Route::resource('products','ProductsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('success');

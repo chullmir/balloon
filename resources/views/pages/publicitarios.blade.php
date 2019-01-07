@@ -64,7 +64,7 @@
 			<p class="publi-parr contacto">
 				<b>¿Queres ver tu mensaje de la mejor manera posible?</b>
 				<br><br>
-				<a href="contacto.php">Escribinos para obtener presupuesto</a>
+				<a href="{{route('contacto')}}">Escribinos para obtener presupuesto</a>
 			</p>
 		</div>
 	</div>

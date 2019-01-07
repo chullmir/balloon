@@ -25,7 +25,7 @@
 	</div>
 </div>
 <div class="col-12 boton-contacto">
-	<a href="contacto.php" class="btn btn-info">Consultar los precios</a>
+	<a href="{{route('contacto')}}" class="btn btn-info">Consultar los precios</a>
 </div>
 <p>El costo del envío tiene un recargo los días de semana entre las 19-10 hs y los sábados por la tarde, todo el domingo y feriados.</p>
 @endsection

@@ -61,6 +61,6 @@
 </div>
 
 <div class="col-12 contacto">
-	<a href="contacto.php">¿Tienes alguna pregunta sobre nuestras Franquicias?</a>
+	<a href="{{route('contacto')}}">¿Tienes alguna pregunta sobre nuestras Franquicias?</a>
 </div>
 @endsection
