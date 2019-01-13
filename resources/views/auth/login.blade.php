@@ -12,15 +12,21 @@
 					@csrf
 					
 					<input id="email" type="email" class="form-control form-email {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="Email"  value="{{old('email')}}">
+					<div class="d-none" id="blankEmail">
+						<p>Por favor completar el email</p>
+					</div>
 					@if ($errors->has('email'))
-						<div class="alert alert-danger">
+						<div class="error">
 							<strong>{{ $errors->first('email') }}</strong>
 						</div>
 					@endif
 
 					<input id="password" type="password" class="form-control form-password {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Contraseña">
+					<div class="d-none" id="blankPass">
+						<p>Por favor completar la constraseña</p>
+					</div>
 					@if ($errors->has('password'))
-						<div class="alert alert-danger">
+						<div class="error">
 							<strong>{{ $errors->first('password') }}</strong>
 						</div>
 					@endif
@@ -39,4 +45,5 @@
          	</div>
         </div>
     </body>
+    <script src="js/validate.js"></script>
 @endsection

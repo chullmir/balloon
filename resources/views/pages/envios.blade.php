@@ -3,6 +3,8 @@
 @section('titulo-pagina','Envíos a domicilio')
 @section('csstype','envios')
 @section('contenido')
+
+
 <h5 class="subtitulo-pagina">Tenemos delivery para todos nuestros productos!</h5>
 <p>Los globos de látex tienen una duración de entre 8-12 horas en el aire, los metalizados de 3-4 días</p>
 <div class="imagen">

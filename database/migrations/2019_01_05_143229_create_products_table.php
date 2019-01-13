@@ -22,6 +22,8 @@ class CreateProductsTable extends Migration
             $table->decimal('precio',5,2);
             $table->text('categorias');
             $table->string('marca');
+            $table->boolean('sale');
+            $table->boolean('featured');
             $table->timestamps();
         });
     }

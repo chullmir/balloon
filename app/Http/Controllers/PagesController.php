@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class PagesController extends Controller
 {
     public function home()
     {
-    	$products = \App\Product::all();
-    	return view('pages.index',compact('products'));
+    	$featured = Product::where('featured','1')->paginate(12);
+        $sale = Product::where('sale','1')->paginate(12);
+        // $featured = Product::all();
+    	return view('pages.index',compact('featured','sale'));
     }
     public function mayorista()
     {

@@ -6,6 +6,7 @@
 	<div class="row">
 	@foreach($products as $product)
 		<div class="col-12 col-md-4 producto">
+			<i class="fas fa-heart"></i>
 			<div class="card-producto">
 				<div class="imagen">
 					<a href="/products/{{$product->id}}">
@@ -13,9 +14,10 @@
 					</a>
 				</div>
 				<a href="/products/{{$product->id}}"><p class="product-title">{{$product->nombre}}</p></a>
-				<p class="product-code">{{$product->codigo}}</p>
+				<p class="categorias">{{$product->categorias}}</p>
+				<p class="precio">${{$product->precio}}</p>
 				<div class="botones">
-					<a href="/products/{{$product->id}}" class="btn btn-info">Ver</a>
+					<a href="/products/{{$product->id}}" class="btn btn-dark">Ver</a>
 					@if(!auth()->guest())
 						<a href="/products/{{$product->id}}/edit" class="btn btn-secondary">Editar</a>
 					@endif
@@ -25,8 +27,7 @@
 		</div>
 	@endforeach
 	</div>
-	<div class="paglaravel">
+	<div class="pagination justify-content-center">
 		{{$products->links()}}	
 	</div>
-	<a href="/products/create" class="btn btn-info">Crear</a>
 @endsection

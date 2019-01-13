@@ -8,19 +8,20 @@
  		</div>
  		<div class="col-12">
  			<form class="form-group" method="post" enctype="multipart/form-data" action="{{route('register')}}">
- 				{{csrf_field()}}
+ 				@csrf
  				<div class="form-group">
- 					<input type="text" name="name" class="form-control form-name {{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Nombre*" id="name" value="{{ old('name') }}">
+ 					
+ 					<input type="text" name="nombre" class="form-control form-name" placeholder="Nombre" id="nombre" value="{{old('nombre')}}">
  				</div>
- 				@if ($errors->has('name'))
- 					<div class="alert alert-danger">
- 						<strong>{{ $errors->first('name') }}</strong>
- 					</div>
-				@endif
+ 				<div class="error {{$errors->has('nombre') ? '' : 'd-none'}}" id="blankName">
+ 					Por favor completar el nombre
+ 				</div>
+ 				
 
 				<div class="form-group">
 					<input type="text" name="lastname" class="form-control form-lastname {{ $errors->has('lastname') ? ' is-invalid' : '' }}" placeholder="Apellido*" id="lastname" value="{{old('lastname')}}">
 				</div>
+				
 				@if ($errors->has('lastname'))
  					<div class="alert alert-danger">
  						<strong>{{ $errors->first('lastname') }}</strong>
@@ -88,5 +89,6 @@
  			<a href="{{route('login')}}" class="btn btn-warning btn-block">Iniciar Sesión</a>
  		</div>
  	</div>
+ 	<script src="js/validateRegister.js"></script>
 </body>
 

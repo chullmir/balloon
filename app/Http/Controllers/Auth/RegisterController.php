@@ -49,14 +49,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'nombre' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'country' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ],[
-            'name.required' => 'Por favor, completar el nombre',
-            'name.max' => 'El nombre no puede ser más largo que 255 caracteres',
+            'nombre.required' => 'Por favor, completar el nombre',
+            'nombre.max' => 'El nombre no puede ser más largo que 255 caracteres',
             'lastname.required' => 'Por favor, completar el apellido',
             'lastname.max' => 'El apellido no puede ser más largo que 255 caracteres',
             'country.required' => 'Por favor, completar el país',

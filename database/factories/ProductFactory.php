@@ -11,5 +11,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'precio'=> $faker->numberBetween(100,1000),
         'categorias'=> $faker->randomElement(['Amor','Felicidades','Cumpleaños','Personajes']),
         'marca'=> $faker->randomElement(['Anagram','Convergram','Dilax','Tuki','Chino']),
+        'sale'=> $faker->boolean(),
+        'featured'=> $faker->boolean(),
     ];
 });
