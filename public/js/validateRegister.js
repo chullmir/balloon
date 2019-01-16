@@ -19,7 +19,7 @@ lastname.onblur = function(){
 }
 
 fetch("https://restcountries.eu/rest/v2/all"){
-	.then(function (response)){
+	.then(function (response){
 		return response.json();
-	}
+	})
 }
