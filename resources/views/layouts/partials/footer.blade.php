@@ -9,7 +9,7 @@
 			<div class="row d-flex align-items-start">
 				
 				
-				<a href="https://www.facebook.com/ballooncityar/" class="logo-redes"><i class="fab fa-facebook"></i></a>
+				
 				
 				<div class="logo-redes">
 					<a href="https://www.facebook.com/ballooncityar/"><i class="fab fa-facebook"></i></a>

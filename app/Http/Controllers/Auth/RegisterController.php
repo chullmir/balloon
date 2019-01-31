@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'country' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'password_confirmation' => 'required',
         ],[
             'nombre.required' => 'Por favor, completar el nombre',
             'nombre.max' => 'El nombre no puede ser más largo que 255 caracteres',
