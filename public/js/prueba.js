@@ -35,8 +35,8 @@ listProvincias.onreadystatechange = function(){
 		for (var i = 0; i < datos.length; i++) {
 			var elemento = document.createElement('option');
 			elemento.innerHTML += datos[i].state;
-			document.getElementById('provincia').appendChild('elemento');
+			document.getElementById('provincia').appendChild(elemento);
 		}
 	}
-
 }
+listProvincias.send();

@@ -54,8 +54,47 @@
 							</div>
 						@endif
 						
-						<a href="#" class="btn btn-dark">Comprar</a>
-						<a href="/products/{{$product->id}}" class="btn btn-secondary">Ver</a>
+						<a href="/products/{{$product->id}}" class="btn btn-dark">Comprar</a>
+
+
+
+
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#productModal">
+							Ver
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="productModalLabel">{{$product->nombre}}</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										
+
+										<div class="img-producto">
+											<a href="/products/{{$product->id}}">
+												<img src="/img/producto/producto.jpg" alt="" class="img-fluid">
+											</a>
+										</div>
+
+
+
+
+									</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
 					</div>
 				@endforeach
 		</div>

@@ -27,6 +27,34 @@
 					<p class="card-text card-telefono"><a href="tel:4951-1057">4951-1057</a></p>
 					<p class="card-text card-email"><a href="mailto:lavalle@ballooncity.com.ar">lavalle@ballooncity.com.ar</a></p>
 					<p class="card-text card-horarios">L a V de 9:30 a 18:30<br>Sábado de 9:30 a 13:30</p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+					
 				</div>
 			</div>
 		</div>
