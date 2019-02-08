@@ -31,17 +31,21 @@
 				
 
 				<div class="form-group">
-					<input type="text" name="country" class="form-control {{ $errors->has('lastname') ? ' is-invalid' : '' }}" placeholder="País*" value="{{old('country')}}">
+					<label for="country">País</label>
+					<select class="form-control" id="country"></select>
 				</div>
 				<script type="text/javascript" src="js/prueba.js"></script>
-				<div>
-					
-				</div>
+
 				@if($errors->has('country'))
  					<div class="error">
  						<strong> {{$errors->first('country')}} </strong>
  					</div>
  				@endif
+
+ 				<div class="form-group d-none" id="provForm">
+ 					<label for="provincia">Provincia</label>
+ 					<select class="form-control" id="provincia"></select>
+ 				</div>
 
  				
 

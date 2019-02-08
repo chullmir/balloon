@@ -10,13 +10,25 @@ elementsInArray.forEach(function(element){
 		}
 	})
 });
-theForm.onsubmit = function(event){
-	for (var i = 0; i < elementsInArray.length; i++) {
-		if (elementsInArray[i].value == "") {
-			errorForm = 1;
-		}
-	}
-	if (errorForm == 1) {
-		event.preventDefault();
-	}
-}
+// theForm.onsubmit = function(event){
+// 	for (var i = 0; i < elementsInArray.length; i++) {
+// 		if (elementsInArray[i].value == "") {
+// 			errorForm = 1;
+// 		}
+// 	}
+// 	if (errorForm == 1) {
+// 		event.preventDefault();
+// 	}
+// }
+
+// var datos;
+// var ajaxCall = new XMLHttpRequest();
+// ajaxCall.open('GET','https://restcountries.eu/rest/v2/all');
+// ajaxCall.send();
+
+
+// ajaxCall.onreadystatechange = function(){
+// 	if(ajaxCall.readyState == 4 && ajaxCall.status == 200){
+// 		var datos = JSON.parse(ajaxCall.responseText);
+// 	}
+// }
