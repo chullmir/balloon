@@ -1,6 +1,8 @@
 @extends('layouts.layout-pag')
 @section('pageTitle','Perfil')
-@section('titulo-pagina','Bienvenido XX')
+@section('titulo-pagina')
+Bienvenido {{auth()->user()->nombre}}
+@endsection
 @section('contenido')
 <a href="/products/create" class="btn btn-info">Crear Producto</a>
 <form action="{{route('logout')}}" method="post">

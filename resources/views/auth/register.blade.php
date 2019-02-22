@@ -32,7 +32,9 @@
 
 				<div class="form-group">
 					<label for="country">País</label>
-					<select class="form-control" id="country"></select>
+					<select class="form-control" id="country" name="country">
+						<option></option>
+					</select>
 				</div>
 				<script type="text/javascript" src="js/prueba.js"></script>
 
@@ -44,7 +46,9 @@
 
  				<div class="form-group d-none" id="provForm">
  					<label for="provincia">Provincia</label>
- 					<select class="form-control" id="provincia"></select>
+ 					<select class="form-control" id="provincia" name="provincia">
+ 						<option></option>
+ 					</select>
  				</div>
 
  				

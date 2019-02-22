@@ -56,9 +56,6 @@
 						
 						<a href="/products/{{$product->id}}" class="btn btn-dark">Comprar</a>
 
-
-
-
 						<!-- Button trigger modal -->
 						<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#productModal">
 							Ver

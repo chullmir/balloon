@@ -1,21 +1,37 @@
-var ajaxCall = new XMLHttpRequest();
-//2. Pedimos los datos con el método elegido
-ajaxCall.open('GET','https://restcountries.eu/rest/v2/all');
-// ajaxCall.onload = function(){
-// 	console.log(ajaxCall);
+// var ajaxCall = new XMLHttpRequest();
+// //2. Pedimos los datos con el método elegido
+// ajaxCall.open('GET','https://restcountries.eu/rest/v2/all');
+// // ajaxCall.onload = function(){
+// // 	console.log(ajaxCall);
+// // }
+// ajaxCall.onreadystatechange = function(){
+// 	if (ajaxCall.readyState == 4 && ajaxCall.status ==200) {
+// 		var datos = JSON.parse(ajaxCall.responseText);
+// 		for (var i = 0; i < datos.length; i++) {
+// 			var elemento = document.createElement('option');
+// 			elemento.innerHTML += datos[i].name;
+// 			document.getElementById('country').appendChild(elemento);
+// 		}
+// 	}
 // }
-ajaxCall.onreadystatechange = function(){
-	if (ajaxCall.readyState == 4 && ajaxCall.status ==200) {
-		var datos = JSON.parse(ajaxCall.responseText);
-		for (var i = 0; i < datos.length; i++) {
+// ajaxCall.send();
+
+
+fetch('https://restcountries.eu/rest/v2/all')
+	.then(function(countries) {
+		return countries.json();
+	})
+	.then(function(countries) {
+		// console.log(countries.length);
+		for (var i = 0; i < countries.length; i++) {
 			var elemento = document.createElement('option');
-			elemento.innerHTML += datos[i].name;
+			elemento.innerHTML += countries[i].name;
 			document.getElementById('country').appendChild(elemento);
 		}
-	}
-}
-ajaxCall.send();
-
+	})
+	.catch(function(error) {
+		console.log("The error was: " + error);
+	});
 
 var paisElegido = document.getElementById('country');
 paisElegido.addEventListener('change',function(){
