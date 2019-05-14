@@ -55,15 +55,15 @@ class ProductsController extends Controller
                 'marca.required' => 'El campo marca es obligatorio',
             ]
         );
-        // $product = new Product;
-        // $product->codigo = $request->codigo;
-        // $product->nombre = $request->nombre;
-        // $product->stock = $request->stock;
-        // $product->tipo = $request->tipo;
-        // $product->precio = $request->precio;
-        // $product->categorias = $request->categorias;
-        // $product->marca = $request->marca;
-        // $product->save();
+        $product = new Product;
+        $product->codigo = $request->codigo;
+        $product->nombre = $request->nombre;
+        $product->stock = $request->stock;
+        $product->tipo = $request->tipo;
+        $product->precio = $request->precio;
+        $product->categorias = $request->categorias;
+        $product->marca = $request->marca;
+        $product->save();
         
         // Product::create([
         //     'codigo'=>request('codigo'),
@@ -76,7 +76,7 @@ class ProductsController extends Controller
         //     'marca'=>request('marca')
         // ]);
 
-        Product::create(request(['codigo','nombre','stock','tipo','precio','categorias','marca']));
+        // Product::create(['codigo','nombre','stock','tipo','precio','categorias','marca']);
 
 
 

@@ -36,7 +36,7 @@
 
 
 	<div class="container listadoproductos">
-		<h2 class="title">Featured</h2>
+		{{-- <h2 class="title">Featured</h2>
 		<div class="row">
 				@foreach($featured as $product)
 					<div class="col-6 col-lg-4 producto">
@@ -94,7 +94,7 @@
 
 					</div>
 				@endforeach
-		</div>
+		</div> --}}
 
 
 		<h2>Sale</h2>

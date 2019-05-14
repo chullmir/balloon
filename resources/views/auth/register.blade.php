@@ -47,7 +47,7 @@
  				<div class="form-group d-none" id="provForm">
  					<label for="provincia">Provincia</label>
  					<select class="form-control" id="provincia" name="provincia">
- 						<option></option>
+ 						<option>Elegi</option>
  					</select>
  				</div>
 
