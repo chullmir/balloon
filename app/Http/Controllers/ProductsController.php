@@ -45,6 +45,7 @@ class ProductsController extends Controller
                 'precio' => 'required | numeric',
                 'categorias' => 'required',
                 'marca' => 'required',
+                'sale'
             ],[
                 'codigo.required' => 'El campo código es obligatorio',
                 'nombre.required' => 'El campo nombre es obligatorio',
@@ -55,14 +56,23 @@ class ProductsController extends Controller
                 'marca.required' => 'El campo marca es obligatorio',
             ]
         );
-        $product = new Product;
-        $product->codigo = $request->codigo;
-        $product->nombre = $request->nombre;
-        $product->stock = $request->stock;
-        $product->tipo = $request->tipo;
-        $product->precio = $request->precio;
-        $product->categorias = $request->categorias;
-        $product->marca = $request->marca;
+        // $product = new Product;
+        // $product->codigo = $request->codigo;
+        // $product->nombre = $request->nombre;
+        // $product->stock = $request->stock;
+        // $product->tipo = $request->tipo;
+        // $product->precio = $request->precio;
+        // $product->categorias = $request->categorias;
+        // $product->marca = $request->marca;
+        // // $product->sale = $request->sale; 
+        // $product->save();
+
+        // dd($request->file('imagen'));
+
+        $product=Product::create($request->all());
+        if ($request->hasFile('imagen')) {
+            $product->imagen = $request->file('imagen')->store('public');
+        }
         $product->save();
         
         // Product::create([
@@ -114,6 +124,8 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+
+        // dd($request->file('imagen')->store('public'));
         $product->update(request(['codigo','nombre','stock','tipo','precio','categorias','marca']));
         return redirect('/products');
     }

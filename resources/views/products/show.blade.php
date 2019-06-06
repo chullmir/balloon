@@ -2,7 +2,7 @@
 @section('pageTitle','Ver Producto')
 
 @section("imagen")
-	<img src="/img/producto/producto.jpg" alt="">
+	<img src="{{Storage::url($product->imagen)}}" alt="">
 @endsection
 
 

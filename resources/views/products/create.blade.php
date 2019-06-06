@@ -13,7 +13,7 @@
 				</ul>
 			</div>
 		@endif
-		<form action="/products" class="formulario" method="post">
+		<form action="/products" class="formulario" method="post" enctype="multipart/form-data">
 			@csrf
 			<div class="form-group">
 				<label for="codigo">Código de Producto</label>
@@ -50,6 +50,19 @@
 				<label for="marca">Marca</label>
 				<input type="text" name="marca" id="marca" class="form-control {{$errors->has('marca') ? 'is-invalid' : ''}}" placeholder="Marca" value="{{old('marca')}}">
 			</div>
+
+			<div class="form-group">
+				<label for="marca">Imagen</label>
+				<input type="file" name="imagen">
+			</div>
+
+
+			{{-- <div class="form-group">
+				<label>Oferta</label>
+				<div class="form-check">
+					<input type="checkbox" name="sale" id="sale" class="form-check-input" value="{{old('sale')}}">
+				</div>
+			</div> --}}
 
 			<input type="submit" value="Cargar Producto" class="btn btn-info btn-block">
 			<a href="{{route('products.index')}}" class="btn btn-secondary btn-block">Volver</a>

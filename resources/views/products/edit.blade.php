@@ -12,7 +12,8 @@
 				</ul>
 			</div>
 		@endif
-		<form action="/products/{{$product->id}}" class="formulario" method="post">
+		<img src="{{Storage::url($product->imagen)}}" width="100px" alt="">
+		<form action="/products/{{$product->id}}" class="formulario" method="post" enctype="multipart/form-data">
 			@method('PATCH')
 			@csrf
 			<div class="form-group">
@@ -49,6 +50,14 @@
 				<label for="marca">Marca</label>
 				<input type="text" name="marca" id="marca" class="form-control {{$errors->has('marca') ? 'is-invalid' : ''}}" placeholder="Marca" value="{{$product->marca}}">
 			</div>
+
+
+			<div class="form-group">
+				<label for="imagen">imagen</label>
+				<input type="file" name="imagen">
+			</div>
+
+
 
 			<input type="submit" value="Actualizar" class="btn btn-info btn-block">
 			<a href="{{route('products.index')}}" class="btn btn-secondary btn-block">Volver</a>

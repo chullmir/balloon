@@ -10,7 +10,8 @@
 			<div class="card-producto">
 				<div class="imagen">
 					<a href="/products/{{$product->id}}">
-						<img src="/img/producto/producto.jpg" alt="{{$product->nombre}}" class="img-fluid">
+						<img src="{{Storage::url($product->imagen)}}" alt="{{$product->nombre}}" class="img-fluid">
+						{{-- <img src="/img/producto/producto.jpg" alt="{{$product->nombre}}" class="img-fluid"> --}}
 					</a>
 				</div>
 				<a href="/products/{{$product->id}}"><p class="product-title">{{$product->nombre}}</p></a>
