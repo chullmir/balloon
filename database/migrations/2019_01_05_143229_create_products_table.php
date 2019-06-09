@@ -17,13 +17,14 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('codigo');
             $table->string('nombre');
+            $table->string('imagen')->default('producto.jpg');
             $table->integer('stock');
             $table->string('tipo');
             $table->decimal('precio',5,2);
             $table->text('categorias');
             $table->string('marca');
-            $table->boolean('sale');
-            $table->boolean('featured');
+            $table->boolean('sale')->nullable();
+            $table->boolean('featured')->nullable();
             $table->timestamps();
         });
     }

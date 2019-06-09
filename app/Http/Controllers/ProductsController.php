@@ -45,7 +45,6 @@ class ProductsController extends Controller
                 'precio' => 'required | numeric',
                 'categorias' => 'required',
                 'marca' => 'required',
-                'sale'
             ],[
                 'codigo.required' => 'El campo código es obligatorio',
                 'nombre.required' => 'El campo nombre es obligatorio',
