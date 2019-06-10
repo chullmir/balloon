@@ -42,10 +42,10 @@ class PagesController extends Controller
     {
         return view('pages.puntos-venta');
     }
-    public function contacto()
-    {
-        return view('pages.contacto');
-    }
+    // public function contacto()
+    // {
+    //     return view('pages.contacto');
+    // }
     public function profile()
     {
         return view('pages.profile');

@@ -19,12 +19,15 @@ Route::get('/franquicias','PagesController@franquicias')->name('franquicias');
 Route::get('/eventos','PagesController@eventos')->name('eventos');
 Route::get('/publicitarios','PagesController@publicitarios')->name('publicitarios');
 Route::get('/puntos-venta','PagesController@puntos_venta')->name('puntos-venta');
-Route::get('/contacto','PagesController@contacto')->name('contacto');
+// Route::get('/contacto','PagesController@contacto')->name('contacto');
 
 Route::get('/profile','PagesController@profile')->name('profile')->middleware('auth');
 
 Route::get('products/buscar','ProductsController@search')->name('search');
 Route::resource('products','ProductsController');
+
+Route::resource('contacto','MessagesController');
+Route::get('contacto','MessagesController@index')->name('contacto');
 
 Auth::routes();
 
