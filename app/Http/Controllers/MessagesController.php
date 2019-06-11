@@ -1,8 +1,14 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use App\Message;
+
+// use App\Mail\MessageReceived;
+use Illuminate\Support\Facades\Mail;
+
 use Illuminate\Http\Request;
 
 class MessagesController extends Controller
@@ -41,6 +47,10 @@ class MessagesController extends Controller
                 'email' => 'required',
                 'mensaje' => 'required',
             ]);
+
+        // Mail::to('paulochull@gmail.com')->send(new MessageReceived($message));
+
+
         Message::create([
             'nombre' => $request->nombre,
             'telefono' => $request->telefono,
@@ -48,9 +58,10 @@ class MessagesController extends Controller
             'mensaje' => $request->mensaje,
         ]);
 
-
-        // Message::create(request(['nombre', 'telefono', 'email', 'mensaje']));
         return 'Exito';
+    }
+    public function exito(){
+
     }
 
     /**
