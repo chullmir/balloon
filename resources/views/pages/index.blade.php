@@ -36,13 +36,13 @@
 
 
 	<div class="container listadoproductos">
-		{{-- <h2 class="title">Featured</h2>
+		<h2 class="title">Productos</h2>
 		<div class="row">
-				@foreach($featured as $product)
+				@foreach($products as $product)
 					<div class="col-6 col-lg-4 producto">
 						<div class="img-producto">
 							<a href="/products/{{$product->id}}">
-								<img src="/img/producto/producto.jpg" alt="" class="img-fluid">
+								<img src="{{Storage::url($product->imagen)}}" alt="" width="300px" class="img-fluid">
 							</a>
 						</div>
 
@@ -94,10 +94,10 @@
 
 					</div>
 				@endforeach
-		</div> --}}
+		</div>
 
 
-		<h2>Sale</h2>
+		{{-- <h2>Sale</h2>
 		<div class="row">
 				@foreach($sale as $product)
 					<div class="col-6 col-lg-4 producto">
@@ -117,7 +117,7 @@
 						<a href="/products/{{$product->id}}" class="btn btn-secondary">Ver</a>
 					</div>
 				@endforeach
-		</div>
+		</div> --}}
 	</div>
 
 @endsection
