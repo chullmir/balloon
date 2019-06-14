@@ -75,7 +75,7 @@
 
 										<div class="img-producto">
 											<a href="/products/{{$product->id}}">
-												<img src="/img/producto/producto.jpg" alt="" class="img-fluid">
+												<img src="{{Storage::url($product->imagen)}}" alt="" width="300px" class="">
 											</a>
 										</div>
 
